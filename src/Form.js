@@ -38,7 +38,6 @@ function Form(props) {
          id="job"
          value={person.job}
          onChange={handleChange} />
-          
          <input type="button" value="Submit" onClick={submitForm} />
       </form>
   ); 
