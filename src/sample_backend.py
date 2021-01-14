@@ -53,9 +53,11 @@ def get_users():
         return users
     elif request.method =='POST':
         userToAdd = request.get_json()
-        users['users_list'].append(userToAdd)
+        idAdd = {'id' : userToAdd.get('name') + '01'}
+        idAdd.update(userToAdd)
+        users['users_list'].append(idAdd)
         resp = jsonify(success=True)
-        #resp.status_code = 200
+        resp.status_code = 201
         #optionally, you can always set a response code.
         # 200 is the default code for a normal response
         return resp
