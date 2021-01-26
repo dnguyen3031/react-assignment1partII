@@ -83,7 +83,6 @@ def get_user(id):
             resp = jsonify(), 204
             return resp
         return jsonify({"error": "User not found"}), 404
-
         #for user in users['users_list']:
         #    if user['id'] == id:
         #        users['users_list'].remove(user)
